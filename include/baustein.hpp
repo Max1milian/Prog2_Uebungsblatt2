@@ -21,9 +21,9 @@ public:
 };
 
 void Baustein::addEingang(Schnittstelle* schnittstelle){
-    eingang.push_back(*schnittstelle->getPegel);
+    eingang.push_back(schnittstelle);
 }
 
 void Baustein::addAusgang(Schnittstelle* schnittstelle){
-
+        ausgang.push_back(schnittstelle);
 }
