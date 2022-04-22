@@ -15,14 +15,6 @@ public:
     ~Schnittstelle();
 };
 
-Schnittstelle::Schnittstelle(/* args */)
-{
-}
-
-Schnittstelle::~Schnittstelle()
-{
-}
-
 short Schnittstelle::getPegel(){
         return pegel;
 }
