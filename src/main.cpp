@@ -1,5 +1,5 @@
 #include <iostream>
-int main(int argc, char const *argv[])
+int main()
 {
     std::cout << "test" << std::endl;
     return 0;
