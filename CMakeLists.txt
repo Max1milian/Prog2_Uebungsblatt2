@@ -8,7 +8,7 @@ project(Uebungsblatt2
 if(MSVC)
         add_compile_options(/W3 /WX /permissive)
 else()
-        add_compile_options(-Wextra -Wall -Werror)
+        add_compile_options(-Wextra -Wall -Werror -pedantic)
 endif(MSVC)
 
 set(CMAKE_CXX_STANDARD 11)
