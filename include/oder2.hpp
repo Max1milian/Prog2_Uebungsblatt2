@@ -9,6 +9,7 @@ public:
     Oder2(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* a0);
     ~Oder2();
     void update();
+    void print();
 };
 
 Oder2::Oder2(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* a0)
@@ -18,6 +19,14 @@ Oder2::Oder2(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* a0)
     addEingang(e1);
     addAusgang(a0);
 }
+
+void Oder2::print(){
+    std::cout << name << std::endl;
+    std::cout << "Eingang 0: Pegel = " << eingang.at(0)->getPegel() << std::endl;
+    std::cout << "Eingang 1: Pegel = " << eingang.at(1)->getPegel() << std::endl;
+    std::cout << "Ausgang 0: Pegel = " << ausgang.at(0)->getPegel() << std::endl;
+}
+
 void Oder2::update(){
     /*hier rufen wir mit .at() eine bestimmte Position des Vectors auf und vergleichen sie mit dem was wir in Schnittstelle definiert haben
     Die Logik hier ist, wenn entweder der erste oder zweite Eingang undefiniert ist, soll auch der Ausgang undefiniert sein*/

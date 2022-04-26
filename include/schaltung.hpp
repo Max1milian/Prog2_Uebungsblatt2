@@ -1,19 +1,10 @@
 #pragma once
 #include "schnittstelle.hpp"
 #include "baustein.hpp"
+#include <vector>
 class Schaltung : Baustein
 {
-private:
-    /* data */
-public:
-    Schaltung(/* args */);
-    ~Schaltung();
+protected:
+    std::vector<Baustein*> bausteine {};
+    std::vector<Schnittstelle*> intern {};
 };
-
-Schaltung::Schaltung(/* args */)
-{
-}
-
-Schaltung::~Schaltung()
-{
-}

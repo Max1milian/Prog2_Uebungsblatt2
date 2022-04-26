@@ -16,7 +16,7 @@ std::vector <Schnittstelle*> ausgang{};
 public:
     void addEingang(Schnittstelle* schnittstelle);
     void addAusgang(Schnittstelle* schnittstellet);    
-    virtual void print() = 0;
+    virtual void print();
     virtual void update() = 0;
 };
 
