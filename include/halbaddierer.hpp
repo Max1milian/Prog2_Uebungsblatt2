@@ -17,17 +17,18 @@ public:
 
 Halbaddierer::Halbaddierer(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* a0, Schnittstelle* a1)
 {
+    
     intern.push_back(e0);
     intern.push_back(e1);
     intern.push_back(a0);
     intern.push_back(a1);
 
     Xor2 xor2(e0, e1, a0);
+    //baustein.push_back(xor2);
     Und2 und2(e0, e1, a1);
-
-    xor2.update();
-    und2.update();
+    //baustein.pushback(und2);
+    //name = "Halbaddierer";
 }
-
 void Halbaddierer::update(){
+
 }

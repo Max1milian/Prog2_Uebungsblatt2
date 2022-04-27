@@ -5,6 +5,6 @@
 class Schaltung : Baustein
 {
 protected:
-    std::vector<Baustein*> bausteine {};
+    std::vector<Baustein*> baustein {};
     std::vector<Schnittstelle*> intern {};
 };
