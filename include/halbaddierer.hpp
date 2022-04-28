@@ -30,6 +30,7 @@ Halbaddierer::Halbaddierer(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* 
     Und2* und2 = new Und2(e0, e1, a1);
     baustein.push_back(und2);
 }
+
 void Halbaddierer::update(){
         //hier iterieren wir durch den Vektor und führen die Update funktion der jeweiligen Bausteine aus.
         for (int i = 0; i < baustein.size(); i++)

@@ -20,6 +20,7 @@ short Schnittstelle::getPegel(){
 }
 
 bool Schnittstelle::setPegel(short pegel){
+        //wir setzen einen Switch auf Pegel um zu überprüfen ob der Pegel HIGH, LOW oder UNDEFINED ist
         switch (pegel)
         {
         case HIGH:
@@ -32,6 +33,7 @@ bool Schnittstelle::setPegel(short pegel){
             return true;
             break;
         
+        //anstatt alle Fälle durchzugehen setzen wir einfach für alles was nicht HIGH oder LOW ist auf UNDEFINED und geben ein false zurück
         default:
             pegel = UNDEFINED;
             return false;
