@@ -2,7 +2,7 @@
 #include "schnittstelle.hpp"
 #include "baustein.hpp"
 #include <vector>
-class Schaltung : Baustein
+class Schaltung : public Baustein
 {
 protected:
     std::vector<Baustein*> baustein {};

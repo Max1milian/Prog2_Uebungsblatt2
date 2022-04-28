@@ -2,7 +2,7 @@
 #include "baustein.hpp"
 #include "schnittstelle.hpp"
 
-class Und2 : Baustein //<-- : heißt: erbt von
+class Und2 : public Baustein //<-- : heißt: erbt von
 {
 private:
     /* data */

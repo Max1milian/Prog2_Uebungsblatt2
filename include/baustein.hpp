@@ -9,9 +9,9 @@ class Baustein //<-- abstrakte Klasse. Objekterzeugung nicht moeglich
 private:
     /* data */
 protected:
-std::string name;
-std::vector <Schnittstelle*> eingang{}; //hier erzeugen wir ein dynamisches array für die Eingänge
-std::vector <Schnittstelle*> ausgang{}; //hier für die Ausgänge
+    std::string name;
+    std::vector <Schnittstelle*> eingang{}; //hier erzeugen wir ein dynamisches array für die Eingänge
+    std::vector <Schnittstelle*> ausgang{}; //hier für die Ausgänge
     
 public:
     void addEingang(Schnittstelle* schnittstelle); //wir übgergeben diese als Zeiger damit wir direkt auf die Informationen im Speicher zugreifen können

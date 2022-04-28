@@ -1,7 +1,7 @@
 #pragma once
 #include "schnittstelle.hpp"
 #include "baustein.hpp"
-class Xor2 : Baustein
+class Xor2 : public Baustein
 {
 private:
     /* data */

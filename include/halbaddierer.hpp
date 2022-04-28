@@ -6,7 +6,7 @@
 #include "oder2.hpp"
 #include "und2.hpp"
 
-class Halbaddierer : Schaltung
+class Halbaddierer : public Schaltung
 {
 private:
     /* data */
@@ -15,20 +15,26 @@ public:
     void update();
 };
 
-Halbaddierer::Halbaddierer(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* a0, Schnittstelle* a1)
+Halbaddierer::Halbaddierer(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* a0, Schnittstelle* a1) : Schaltung() //Initialisierung der Schaltung
 {
-    
-    intern.push_back(e0);
-    intern.push_back(e1);
-    intern.push_back(a0);
-    intern.push_back(a1);
+    name = "Halbaddierer";
+    addEingang(e0);
+    addEingang(e1);
+    addAusgang(a0);
+    addAusgang(a1);
 
-    Xor2 xor2(e0, e1, a0);
-    //baustein.push_back(xor2);
-    Und2 und2(e0, e1, a1);
-    //baustein.pushback(und2);
-    //name = "Halbaddierer";
+    //Erstellung der erforderlichen Bausteine
+    Xor2* xor2 = new Xor2(e0, e1, a0);
+    baustein.push_back(xor2);
+
+    Und2* und2 = new Und2(e0, e1, a1);
+    baustein.push_back(und2);
 }
 void Halbaddierer::update(){
-
+        //hier iterieren wir durch den Vektor und führen die Update funktion der jeweiligen Bausteine aus.
+        for (int i = 0; i < baustein.size(); i++)
+        {
+            baustein.at(i)->update();
+        }
+        
 }
