@@ -9,6 +9,8 @@
 
 class Volladdierer : public Schaltung
 {
+    friend void testFull(Volladdierer* voll); //wir setzen hier friend damit wir in der main Funktion die Tests ausführen können
+    friend class Test;
 private:
     /* data */
 public:
@@ -35,17 +37,14 @@ Volladdierer::Volladdierer(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* 
     Halbaddierer* halb2 = new Halbaddierer(i0, e2, a0, i2);
     Oder2* o2 = new Oder2(i1, i2, a1);
     
-    baustein.clear(); //wir rufen die clear function auf um sicher zu gehen, dass wir auf einem leerem vector arbeiten
     baustein.push_back(halb1);
     baustein.push_back(halb2);
     baustein.push_back(o2);
 }
 
 void Volladdierer::update(){
-        //hier iterieren wir durch den Vektor und führen die Update funktion der jeweiligen Bausteine aus.
-        for (int i = 0; i < baustein.size(); i++)
-        {
-            baustein.at(i)->update();
-        }
+        baustein[0]->update(); //halb1
+        baustein[1]->update(); //halb2
+        baustein[2]->update(); //or
 
 }

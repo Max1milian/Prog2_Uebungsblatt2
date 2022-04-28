@@ -32,10 +32,8 @@ Halbaddierer::Halbaddierer(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* 
 }
 
 void Halbaddierer::update(){
-        //hier iterieren wir durch den Vektor und führen die Update funktion der jeweiligen Bausteine aus.
-        for (int i = 0; i < baustein.size(); i++)
-        {
-            baustein.at(i)->update();
-        }
-        
+        //hier rufen wir die jeweiligen bausteine auf
+        baustein[0]->update(); //xor
+        baustein[1]->update(); //and
+         
 }

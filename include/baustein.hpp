@@ -6,6 +6,8 @@
 
 class Baustein //<-- abstrakte Klasse. Objekterzeugung nicht moeglich
 {
+    friend void test2(Baustein* baustein);
+    friend class Test;
 private:
     /* data */
 protected:
