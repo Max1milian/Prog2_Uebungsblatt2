@@ -1,1 +1,1 @@
-g++ -Wall -std=c++11 -o Uebungsblatt2 src/main.cpp include/halbaddierer.hpp include/baustein.hpp include/oder2.hpp include/schaltung.hpp include/schnittstelle.hpp include/und2.hpp include/volladierer.hpp include/xor2.hpp
+g++ -Wall -std=c++11 -o Uebungsblatt2 src/main.cpp -I include #include/halbaddierer.hpp include/baustein.hpp include/oder2.hpp include/schaltung.hpp include/schnittstelle.hpp include/und2.hpp include/volladierer.hpp include/xor2.hpp
