@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BAUSTEIN_HPP_
+#define BAUSTEIN_HPP_
 #include <iostream>
 #include <string>
 #include <vector>
@@ -29,3 +30,4 @@ void Baustein::addEingang(Schnittstelle* schnittstelle){
 void Baustein::addAusgang(Schnittstelle* schnittstelle){
         ausgang.push_back(schnittstelle);
 }
+#endif

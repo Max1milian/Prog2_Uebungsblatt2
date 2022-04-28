@@ -1,4 +1,5 @@
-#pragma once
+#ifndef UND2_HPP_
+#define UND2_HPP_
 #include "baustein.hpp"
 #include "schnittstelle.hpp"
 
@@ -47,3 +48,4 @@ void Und2::update(){
         ausgang.at(0)->setPegel(Schnittstelle::HIGH);
     }
 }
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef XOR2_HPP_
+#define XOR_HPP_
 #include "schnittstelle.hpp"
 #include "baustein.hpp"
 class Xor2 : public Baustein
@@ -48,3 +49,4 @@ void Xor2::update()
         ausgang.at(0)->setPegel(Schnittstelle::LOW);
     }
 }
+#endif

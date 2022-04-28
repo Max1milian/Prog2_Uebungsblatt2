@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SCHNITTSTELLE_HPP_
+#define SCHNITTSTELLE_HPP_
 class Schnittstelle
 {
 private:
@@ -40,3 +41,4 @@ bool Schnittstelle::setPegel(short pegel){
             break;
         }
 }
+#endif

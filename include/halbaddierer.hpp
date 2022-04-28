@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HALBADDIERER_HPP_
+#define HALBADDIERER_HPP_
 #include "schnittstelle.hpp"
 #include "schaltung.hpp"
 #include "baustein.hpp"
@@ -37,3 +38,4 @@ void Halbaddierer::update(){
         baustein[1]->update(); //and
          
 }
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ODER2_HPP_
+#define ODER2_HPP_
 #include "schnittstelle.hpp"
 #include "baustein.hpp"
 class Oder2 : public Baustein
@@ -47,3 +48,4 @@ void Oder2::update(){
     }
     
 }
+#endif

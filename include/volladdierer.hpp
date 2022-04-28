@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VOLLADDIERER_HPP_
+#define VOLLADDIERER_HPP_
 #include "schnittstelle.hpp"
 #include "schaltung.hpp"
 #include "baustein.hpp"
@@ -20,7 +21,7 @@ public:
 
 Volladdierer::Volladdierer(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* e2, Schnittstelle* a0, Schnittstelle* a1)
 {
-    name = "volladierer";
+    name = "volladdierer";
     addEingang(e0);
     addEingang(e2);
     addEingang(e2);
@@ -48,3 +49,4 @@ void Volladdierer::update(){
         baustein[2]->update(); //or
 
 }
+#endif
