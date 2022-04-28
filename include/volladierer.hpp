@@ -32,9 +32,13 @@ Volladdierer::Volladdierer(Schnittstelle* e0, Schnittstelle* e1, Schnittstelle* 
     
     //hier erzeugen wir den ersten halbaddierer. Wie man sieht werden i0 und i1 dafür genutzt um die Signale an halb2 weiterzuleiten
     Halbaddierer* halb1 = new Halbaddierer(e0, e1, i0, i1);
+    Halbaddierer* halb2 = new Halbaddierer(i0, e2, a0, i2);
+    Oder2* o2 = new Oder2(i1, i2, a1);
     
     baustein.clear(); //wir rufen die clear function auf um sicher zu gehen, dass wir auf einem leerem vector arbeiten
     baustein.push_back(halb1);
+    baustein.push_back(halb2);
+    baustein.push_back(o2);
 }
 
 void Volladdierer::update(){
