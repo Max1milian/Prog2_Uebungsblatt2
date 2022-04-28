@@ -1,7 +1,7 @@
 #pragma once
 #include "schnittstelle.hpp"
 #include "baustein.hpp"
-class Oder2 : Baustein
+class Oder2 : public Baustein
 {
 private:
     /* data */
