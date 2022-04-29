@@ -15,8 +15,6 @@ public:
     addAusgang(a0);
     }
 
-    ~Xor2();
-
     void update(){
 
     //gleiches Spiel wie bei allen anderen Bausteinen auch, wenn einer der Eingänge undefined ist, ist auch der ausgang undefined
